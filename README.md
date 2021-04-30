@@ -20,7 +20,14 @@ npm install
 4. Navigate to the `env.local` file. there There you must create new project in Firebase console and just paste your data to this ENV file
 ```bash
 ```
-
+REACT_APP_FIREBASE_API_KEY=Api key from firebase config
+REACT_APP_AUTH_DOMAIN = auth domain from firebase config 
+REACT_APP_PROJECT_ID= synapsi-7120f
+REACT_APP_STORAGE_BUCKET = storage bucket from firebase config
+REACT_APP_MESSAGE_SENDER_ID = message sender id from firebase config 
+REACT_APP_APP_ID=app id from firebase config
+REACT_APP_MEASUREMENT_ID=app measurement from firebase config
+REACT_APP_DATABASE_URL=db url from firebase config , but this is not required
 ## Server Side
 <hr/>
 
