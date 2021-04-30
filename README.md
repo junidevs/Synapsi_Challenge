@@ -52,4 +52,4 @@ const io = require('socket.io')(5000)
 <br>
 Also you have an option to check this via `Decrypt via AES` this checks you result from previous message and will upload the same translated method to verify the correct working of decrypt.
 
-##Thank you for getting to this point and enjoy chat app 😄  
+## Thank you for getting to this point and enjoy chat app 😄  
