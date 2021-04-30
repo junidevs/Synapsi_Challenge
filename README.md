@@ -17,7 +17,7 @@ npm install
 ```
 
 
-4. Navigate to the `env.local` file. there There you must create new project in Firebase console and just paste your data to this ENV file
+4. Navigate to the `env.local` file. there There you must create new project in Firebase console and just paste your data to this ENV file, also what is quite important you should to enable `email` veryfication
 ```bash
 REACT_APP_FIREBASE_API_KEY=Api key from firebase config
 REACT_APP_AUTH_DOMAIN = auth domain from firebase config 
