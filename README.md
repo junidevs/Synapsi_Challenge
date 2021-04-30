@@ -10,9 +10,16 @@
 ```console
 git clone https://github.com/junidevs/Synapsi_Challenge.git .
 ```
-3. Navigate to the `env.local` file. there There you must create new project in Firebase console and just paste your data to this ENV file
-```bash
 
+3. After download the repozitory you must install /node_modules :
+```console
+git clone https://github.com/junidevs/Synapsi_Challenge.git .
+```
+
+
+4. Navigate to the `env.local` file. there There you must create new project in Firebase console and just paste your data to this ENV file
+```bash
+```
 
 ## Server Side
 <hr/>
