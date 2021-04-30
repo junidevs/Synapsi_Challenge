@@ -37,7 +37,7 @@ What you can see in server.js file
 
 
 ```bash
-const io = require('socket.io')(5000)
+To run server: node server.js || const io = require('socket.io')(5000)
 ```
 <hr>
 1. On the first step after run appliaction you should see default `login page` ,if you created account from firebase side great but if not just click on `sign up button`.
