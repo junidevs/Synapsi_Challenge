@@ -11,9 +11,9 @@
 git clone https://github.com/junidevs/Synapsi_Challenge.git .
 ```
 
-3. After download the repozitory you must install /node_modules :
+3. After download the repozitory you must install /node_modules on client and server side as well via :
 ```console
-git clone https://github.com/junidevs/Synapsi_Challenge.git .
+npm install
 ```
 
 
