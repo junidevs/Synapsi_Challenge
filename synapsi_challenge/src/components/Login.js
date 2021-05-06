@@ -1,48 +1,30 @@
-import React,{useRef,useState} from 'react'
-import {useAuth} from '../contexts/AuthContext';
-import {useHistory,Link} from 'react-router-dom'
+import React, { useRef } from 'react'
+import { Container, Form, Button } from 'react-bootstrap'
+import { v4 as uuidV4 } from 'uuid'
 
-export default function Login() {
+export default function Login({ onIdSubmit }) {
+  const idRef = useRef()
 
-    const emailRef = useRef();
-    const passRef = useRef();
-    const { signin } = useAuth()
-    const [error,setError] = useState('');
-    const [loading,setLoading] = useState(false);
-    const history = useHistory();
+  function handleSubmit(e) {
+    e.preventDefault()
 
-    const handleFormSignUp = async (e)=>{
-        e.preventDefault();
-     
-            try{
+    onIdSubmit(idRef.current.value)
+  }
 
-                  setError('');
-                  setLoading(true);
-             await signin(emailRef.current.value,passRef.current.value);
-                  history.push("/")
-                 }
-             
-            catch(err)
-                {
-                
-                  setError("Failed to log in")
-                }
-                setLoading(false);
-   
-    }
-    return (
-        <>
-        <div className="login_Container">
-          <h1>Log in</h1>
-         <h2 style={{color:"red"}}>error:{error}</h2>
-            <form onSubmit={handleFormSignUp}>
-                email<input type="text" required ref={emailRef} /> <br></br>
-                pass<input type="text" required ref={passRef} /> <br></br>
-        
-                <button disabled={loading} type="submit">Log in</button>
-            </form>  
-            <Link to="/signup">Dont have an account yet ?</Link>
-            </div>
-        </>
-    )
+  function createNewId() {
+    onIdSubmit(uuidV4())
+  }
+
+  return (
+    <Container className="align-items-center d-flex" style={{ height: '100vh' }}>
+      <Form onSubmit={handleSubmit} className="w-100">
+        <Form.Group>
+          <Form.Label>Enter Your Id</Form.Label>
+          <Form.Control type="text" ref={idRef} required />
+        </Form.Group>   
+        <Button type="submit" className="mr-2">Login</Button>
+        <Button onClick={createNewId} variant="secondary">Create A New Id</Button>
+      </Form>
+    </Container>
+  )
 }

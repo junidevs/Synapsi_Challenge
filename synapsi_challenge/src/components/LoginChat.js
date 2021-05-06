@@ -16,11 +16,11 @@ export default function Login({submitedId}) {
         <Container className="align-items-center d-flex" style={{height:'100vh '}}>
             <Form  onSubmit={handleSubmit} className="w-100">
                 <Form.Group>
-                    <Form.Label>Enter your ID</Form.Label>
+                    <Form.Label>Enter your Nickname or create random ID</Form.Label>
                     <Form.Control ref={idRef} type="text" required ></Form.Control>
                 </Form.Group>
                 <Button type="submit" className="mr-2">log in</Button>
-                <Button onClick={createID} variant="secondary">Create new id</Button>
+                <Button onClick={createID} variant="secondary">Generate random ID</Button>
             </Form>
         </Container>
     )
