@@ -38,14 +38,16 @@ export default function Signup() {
     }
     return (
         <>
+        <div className="signup_Container">
           <h1>Signup</h1>
-         <h2 style={{color:"red"}}>error:{error}</h2>
+          <h2 style={{color:"white"}}>{error ? 'Failed to login' : null}</h2>
             <form onSubmit={handleFormSignUp}>
-                email<input type="text" required ref={emailRef} /> <br></br>
-                pass<input type="text" required ref={passRef} /> <br></br>
-                confirm pass<input type="text" required ref={passConfirmRef} /> <br></br>
-                <button disabled={loading} type="submit">Sign up</button>
+                <h3>Email</h3><input className="login_inputGroup"  type="text" required ref={emailRef} /> <br></br>
+                <h3>Password</h3><input  className="login_inputGroup" type="text" required ref={passRef} /> <br></br>
+                <h3>Confirm Password</h3> <input className="login_inputGroup" type="text" required ref={passConfirmRef} /> <br></br>
+                <button className="btn btn-primary btn-custom" disabled={loading} type="submit">Sign up</button>
             </form>  
+        </div>
         </>
     )
 }
